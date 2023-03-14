@@ -1,0 +1,906 @@
+@media (min-width: 320px) {
+  body {
+    margin: 0;
+  }
+  .header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    height: inherit;
+    margin: 0 0 0 8%;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 55px;
+  }
+
+  /*----- HAMBURGER MENU < 768px -----*/
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 8% 0 0;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  .menu-btn.active {
+    position: fixed;
+    margin: 0 0 0 80%;
+    z-index: 4;
+  }
+  .menu-btn span {
+    background-color: rgb(107, 71, 251);
+    width: 100%;
+    height: 1.8px;
+    transition: all 0.5s;
+  }
+  /* gamburger icon, when menu is open */
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    transform: translate(0, 10px) rotate(45deg);
+    transition: transform 0.5s;
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    transform: translate(0px, -10px) rotate(-45deg);
+    transition: transform 0.5s;
+  }
+  /* menu, that appears */
+  .menu {
+    background: white;
+    width: 100%;
+    height: 200px;
+    padding: 80px 0 0 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+  .menu nav {
+    display: flex;
+    justify-content: center;
+  }
+  .menu nav ul {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  .menu nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .menu nav ul li a {
+    color: rgb(40, 40, 40);
+    line-height: 25px;
+    text-decoration: none;
+  }
+  .menu nav ul li a:hover {
+    color: rgb(107, 71, 251);
+    border: solid rgb(107, 71, 251);
+    border-width: 0 0 1px 0;
+    width: 15%;
+    line-height: 25px;
+    position: relative;
+    text-decoration: none;
+  }
+  .menu li {
+    list-style-type: none;
+  }
+
+  /*----- FORM < 768px -----*/
+  main .form-back {
+    background-color: rgb(83, 83, 248);
+    width: 100%;
+    height: 600px;
+    opacity: 90%;
+    position: absolute;
+    z-index: 1;
+  }
+  main .form-photo {
+    background: url(images/bg-01.jpg) no-repeat center center;
+    background-size: auto 100%;
+    width: 100%;
+    height: 600px;
+    opacity: 30%;
+    position: absolute;
+    z-index: 2;
+  }
+  main .form-section {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    position: relative;
+    z-index: 3;
+  }
+  .form-square {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .form-block {
+    background-color: white;
+    height: 314px;
+    width: 240px;
+    float: right;
+    border-radius: 6%;
+  }
+  .form-block h2 {
+    color: rgb(120, 58, 255);
+    margin: 27px 0 12px 22px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .form-block input {
+    background-color: rgb(238, 238, 238);
+    color: grey;
+    border: 0;
+    border-radius: 10px;
+    height: 36px;
+    width: 180px;
+    margin: 8px 0 8px 22px;
+    padding-left: 8px;
+  }
+  .form-block select {
+    background-color: rgb(238, 238, 238);
+    color: grey;
+    border: 0;
+    border-radius: 10px;
+    height: 37px;
+    width: 193px;
+    margin: 8px 0 8px 22px;
+    padding: 0 0 0 5px;
+  }
+  .form-block button {
+    background-color: rgb(107, 71, 251);
+    color: white;
+    float: right;
+    width: 136px;
+    height: 40px;
+    margin: 19px 25px 0 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .form-block button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 1s;
+  }
+  .tagline {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tagline h1 {
+    width: 100%;
+    color: white;
+    margin: 0 0 15px 0;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .tagline p {
+    width: 100%;
+    color: white;
+    font-family: "FREESCPT", sans-serif;
+    font-size: 25px;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /*----- YOGA FUTURE PROGRAM > 320px -----*/
+  .yoga-future-program h2 {
+    color: gray;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 25px 20% 0 20%;
+    font-size: 20px;
+  }
+  .yoga-future-program > h2 {
+    color: rgb(107, 71, 251);
+  }
+  .yoga-future-program p {
+    text-align: center;
+    font-family: "FREESCPT";
+    margin: 9px 0 0 0;
+    font-size: 35px;
+  }
+  .yoga-future-program > p {
+    color: gray;
+  }
+  .yoga-future-program .program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 15px 0 0 0;
+  }
+  .program-cards .card {
+    margin: 10px 15px 10px 15px;
+    width: 216px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgb(235, 234, 234);
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+  }
+  .program-cards .card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s;
+  }
+  .card img {
+    float: left;
+    width: 215px;
+    height: 247px;
+    border-radius: 7px;
+  }
+  .card-text {
+    margin: 0 10% 10% 10%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-text h2 {
+    font-size: 15px;
+    margin: 15px 0 0 0;
+    text-align: left;
+  }
+  .card-text p {
+    color: black;
+    font-family: "Times New Roman", Times, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    margin: 20px 0 15px 0;
+    padding: 0 0 0 0;
+  }
+  .card-text span {
+    color: grey;
+    font-family: "Times New Roman", Times, sans-serif;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  /*----- PICTURES SECTION > 320px -----*/
+  .pictures-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15% 0 0 0;
+  }
+  .pictures-section a {
+    width: 50%;
+  }
+  .yoga-picture {
+    background-color: blue;
+    margin-bottom: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .yoga-picture img {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  .yoga-picture:hover img {
+    opacity: 65%;
+    z-index: 1;
+  }
+  .yoga-picture:hover .icon-search {
+    opacity: 100%;
+    transition: all 1.2s;
+  }
+  .yoga-picture .icon-search {
+    content: "\e986";
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  /*----- ABOUT US > 320px -----*/
+  .about-us {
+    margin: 30px 5% 30px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-us-left {
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 5% 0;
+  }
+  .about-us-left h2 {
+    color: rgb(107, 71, 251);
+    font-family: sans-serif;
+    margin: 20px 0 0 0;
+  }
+  .about-us-left p {
+    color: gray;
+    font-size: 13px;
+    line-height: 17px;
+    margin: 16px 0 0 0;
+    font-family: sans-serif;
+  }
+
+  /*----- SLIDER > 320px -----*/
+  section.section {
+    width: 40%;
+    margin: 0 0 0 0;
+    box-shadow: 2px 2px 2px 2px rgb(224, 223, 223);
+    border-radius: 15px;
+    position: relative;
+  }
+  .sec-1 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slideshow {
+    position: absolute;
+  }
+  .slideshow .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+  }
+  .icon-circle-left {
+    background-color: white;
+    color: rgb(107, 71, 251);
+    content: "\ea44";
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    margin: 0 37% 0 0;
+    padding: 0 0 0 0;
+    border-radius: 50%;
+  }
+  .icon-circle-right {
+    background-color: white;
+    color: rgb(107, 71, 251);
+    content: "\ea42";
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    margin: 0 0 0 37%;
+    border-radius: 50%;
+  }
+  .slideshow .slick-prev {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+  }
+  .slideshow .slick-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  /*----- INFO SECTION > 320px -----*/
+  .info-section {
+    background: url(images/bg-02.jpg) no-repeat center center;
+    background-size: auto 100%;
+    width: 100%;
+    height: 1897px;
+    position: absolute;
+    z-index: 2;
+    opacity: 20%;
+  }
+  .info-back {
+    background-color: rgb(83, 83, 248);
+    width: 100%;
+    height: 1897px;
+    position: absolute;
+    z-index: 1;
+    opacity: 90%;
+  }
+  .info-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    padding: 25px 0 0 0;
+  }
+  .info-cards .card-info {
+    width: 80%;
+    height: 30%;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    display: inline-block;
+  }
+  .card-info .img-border {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-info h4 {
+    color: white;
+    margin: 27px 0 0 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .card-info p {
+    color: white;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  /*----- PAY CARDS SECTION > 320px -----*/
+  .pay-cards-back {
+    background-color: white;
+    width: 100%;
+    height: 1450px;
+    position: absolute;
+  }
+  .pay-cards-picture {
+    background: url(images/bg-03.jpg) right bottom no-repeat;
+    background-size: auto 100%;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+  }
+  .pay-cards-block {
+    width: 100%;
+    height: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-content: space-around;
+    padding: 50px 0 0 0;
+  }
+  .pay-cards-block .pay-card {
+    width: 270px;
+    height: 400px;
+    box-shadow: 1px 0px 0px 3px rgb(247, 246, 246);
+    border-radius: 15px;
+    background-color: white;
+    margin: 0 10% 0 10%;
+  }
+  .pay-card .pay-card-price {
+    background-color: rgb(107, 71, 251);
+    width: 100%;
+    height: 30%;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pay-card-price .price {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  .pay-card .pay-card-info {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 6% 0 0 0;
+  }
+  .pay-card-info .info-1c {
+    border: solid black;
+    border-width: 1px 0 0 0;
+    width: 35%;
+    position: absolute;
+    margin: 0 35% 0 35%;
+    padding: 0 0 0 0;
+  }
+  .pay-card-info p {
+    margin: 0 0 0 0;
+    padding: 6% 0 6% 0;
+  }
+  .pay-card .button-block {
+    display: flex;
+    align-items: center;
+    padding: 5% 0 0 0;
+  }
+  .button-block button {
+    width: 46%;
+    height: 38px;
+    background-color: rgb(107, 71, 251);
+    color: white;
+    border: 0px;
+    border-radius: 18px;
+    margin: 0 auto 0 auto;
+  }
+  .button-block button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 1s;
+  }
+
+  /*----- FOOTER CONTACTS > 320px -----*/
+  .contacts-back {
+    width: 100%;
+    height: 360px;
+    background-color: rgb(57, 73, 252);
+    opacity: 80%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contacts-back .contacts-about {
+    width: 50%;
+    height: inherit;
+    box-sizing: border-box;
+    padding: 7% 8% 7% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .contacts-about h4 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 0;
+  }
+  .contacts-about p {
+    color: white;
+    font-family: sans-serif;
+    line-height: 18px;
+    font-size: 12px;
+    margin: 0 0 0 0;
+  }
+  .about-icons {
+    display: flex;
+  }
+  .about-icons a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .about-icons .icon {
+    color: white;
+    margin: 0 10% 0 0;
+  }
+  .contact-us {
+    width: 50%;
+    height: inherit;
+    box-sizing: border-box;
+    padding: 7% 8% 7% 0;
+  }
+  .contact-us h4 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0 0 0 0;
+  }
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    margin: 10% 0 0 0;
+    height: 100%;
+    align-content: space-evenly;
+  }
+  .contacts .c-link {
+    width: 100%;
+    display: flex;
+    margin: 0 0 3% 0;
+  }
+  .contacts .c-link a {
+    text-decoration: none;
+    color: white;
+  }
+  .contacts .c-link p {
+    margin: 0 0 0 5%;
+    line-height: 18px;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+
+  /*----- FOOTER-BOTTOM > 320px -----*/
+  .f-bottom {
+    background-color: rgb(43, 56, 202);
+    width: 100%;
+    height: 80px;
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .f-bottom p {
+    color: white;
+    /* text-decoration: none; */
+    font-family: sans-serif;
+    font-size: 13px;
+    opacity: 70%;
+  }
+
+  .f-bottom a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 570px) {
+  /*----- MENU BTN > 570px -----*/
+  .menu-btn.active {
+    margin: 0 0 0 85%;
+  }
+
+  /*----- YOGA FUTURE PROGRAM > 570px -----*/
+  .program-cards .card {
+    margin: 10px 10px 10px 10px;
+  }
+
+  /*----- INFO SECTION > 570px -----*/
+  .info-section {
+    height: 1000px;
+  }
+  .info-back {
+    height: 1000px;
+  }
+  .info-cards .card-info {
+    width: 40%;
+    margin: 2% 1% 2.5% 1%;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin: 0 0 0 90px;
+  }
+  /*----- HAMBURGER MENU > 768px -----*/
+  .menu-btn {
+    display: none;
+  }
+  .menu {
+    position: relative;
+    width: 80%;
+    height: 80px;
+    padding: 0 0 0 0;
+    transform: none;
+    transition: none;
+  }
+  .menu nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .menu nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 1% 0 0;
+  }
+  .menu nav ul li {
+    width: auto;
+    margin: 0 30px 0 15px;
+  }
+
+  /*----- FORM > 768px -----*/
+  main .form-back {
+    background-color: rgb(83, 83, 248);
+    width: 100%;
+    height: 480px;
+  }
+  main .form-photo {
+    background: url(images/bg-01.jpg) no-repeat center center;
+    background-size: auto 100%;
+    width: 100%;
+    height: 480px;
+  }
+  main .form-section {
+    width: 100%;
+    height: 480px;
+  }
+  .form-square {
+    width: 50%;
+    height: inherit;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .form-block {
+    margin: 0 25px 0 0;
+  }
+  .tagline {
+    width: 50%;
+    height: inherit;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
+  .tagline h1 {
+    font-size: 40px;
+    margin: 0 0 15px 35px;
+    padding: 0 15px 0 0;
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .tagline p {
+    font-size: 35px;
+    margin: 15px 0 0 35px;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  /*----- YOGA FUTURE PROGRAM > 768px -----*/
+  .yoga-future-program h2 {
+    margin: 95px 0 0 0;
+  }
+  .yoga-future-program .program-cards {
+    margin: 38px 0 0 0;
+  }
+  .program-cards .card {
+    width: 455px;
+    flex-wrap: nowrap;
+  }
+  .card img {
+    border-radius: 0px;
+    margin-right: 22px;
+    height: auto;
+  }
+  .card-text {
+    display: block;
+    flex-wrap: nowrap;
+    margin: 0 0 0 0;
+  }
+  .card-text h2 {
+    margin: 36px 0 0 0;
+  }
+  .card-text p {
+    margin: 20px 0 7px 0;
+    padding: 0 30px 0 0;
+  }
+
+  /*----- PICTURE SECTION > 768px -----*/
+  .pictures-section {
+    margin: 160px 0 0 0;
+  }
+  .pictures-section a {
+    width: 25%;
+  }
+
+  /* ABOUT US > 768px */
+  .about-us {
+    flex-wrap: nowrap;
+    margin: 100px 0 150px 0;
+    justify-content: flex-start;
+  }
+  .about-us-left {
+    width: 35%;
+    display: inline-block;
+    margin: 0 5% 0 5%;
+  }
+  .sec-1 {
+    width: 90%;
+    position: absolute;
+    justify-content: flex-end;
+    margin: 0 15% 0 0;
+  }
+  section.section {
+    margin: 0 0 0 0;
+  }
+  .icon-circle-left {
+    margin: 0 38% 0 0;
+  }
+  .icon-circle-right {
+    margin: 0 -2% 0 0;
+  }
+
+  /*----- INFO SECTION > 768px -----*/
+  .info-section {
+    height: 640px;
+  }
+  .info-back {
+    height: 640px;
+  }
+  .info-cards {
+    height: 640px;
+    padding: 2% 0 0 0;
+    justify-content: space-around;
+  }
+  .info-cards .card-info {
+    width: 20%;
+    height: 40%;
+    margin: 2% 1% 2.5% 1%;
+  }
+
+  /*----- PAY CARDS > 768px -----*/
+  .pay-cards-back {
+    height: 900px;
+  }
+  .pay-cards-block {
+    height: 900px;
+    padding: 0 0 0 0;
+    align-content: flex-start;
+    justify-content: center;
+  }
+  .pay-cards-block .pay-card {
+    width: 270px;
+    height: 40%;
+    margin: 5% 5% 0 5%;
+  }
+  .contacts {
+    margin: 5% 0 0 0;
+  }
+  .contacts .c-link {
+    width: 50%;
+    display: flex;
+    margin: 0 0 3% 0;
+  }
+}
+@media (min-width: 992px) {
+  /*----- ABOUT US > 992px -----*/
+  .icon-circle-left {
+    margin: 0 39% 0 0;
+  }
+  .icon-circle-right {
+    margin: 0 -1.5% 0 0;
+  }
+
+  /*----- PAY CARDS > 992px -----*/
+  .pay-cards-block {
+    height: 560px;
+    padding: 0 0 0 0;
+    align-content: flex-start;
+  }
+  .pay-cards-block .pay-card {
+    width: 270px;
+    height: 70%;
+    margin: 5% 1% 0 1%;
+  }
+}
